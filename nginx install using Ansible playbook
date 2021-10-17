@@ -1,0 +1,14 @@
+---
+- name: nginx install
+  hosts: all
+  become: true
+  tasks:
+   - name: install nginx
+     apt:
+      name: nginx
+      state: absent
+   - name: Start service nginx
+     service:
+      name: nginx
+      state: stopped
+...
