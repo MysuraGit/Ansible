@@ -1,0 +1,42 @@
+ 
+1. sudo vi installJenkins.yml
+Copy the below yellow highlighted in the above file:
+
+---
+ - hosts: My_Group
+ 
+   tasks:
+    - name: ensure the jenkins apt repository key is installed
+      apt_key: url=https://pkg.jenkins.io/debian-stable/jenkins.io.key state=present
+      become: yes
+
+    - name: ensure the repository is configured
+      apt_repository: repo='deb https://pkg.jenkins.io/debian-stable binary/' state=present
+      become: yes
+
+    - name: ensure jenkins is installed
+      apt: name=jenkins update_cache=yes
+      become: yes
+
+    - name: ensure jenkins is running
+      service: name=jenkins state=started
+
+
+
+
+2.  sudo vi /etc/ansible/hosts
+make sure you add below entry with target node IP changed (in red color).
+[My_Group] 
+xx.xx.xx.xx ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa  ansible_python_interpreter=/usr/bin/python3
+
+
+
+
+3. Execute the below command:
+sudo ansible-playbook installJenkins.yml
+
+4. This should install Jenkins on the target node and should install Jenkins.
+
+5. Now enter public ip address or public dns name with port no 8080 of target server by in the browser to see Jenkins up and running.
+
+http://target_node_public_dns_name:8080
