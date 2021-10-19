@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git checkout') {
+            steps {
+                git 'https://github.com/sunildevops77/maven.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage('Deployment') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'caa81ffa-ce20-431f-b35d-ee99d9a37331', path: '', url: 'http://172.31.31.199:8080')], contextPath: 'qaenvsdf', war: '**/*.war'
+            }
+        }
+        stage('Email Notification') {
+            steps {
+                mail bcc: '', body: '''Hi
+
+This is Build is passed
+
+Thanks''', cc: '', from: '', replyTo: '', subject: 'Build is successful', to: 'mysurareddy1997@gmail.com'
+            }
+        }
+    }
+}
