@@ -26,5 +26,13 @@ This is Build is passed
 Thanks''', cc: '', from: '', replyTo: '', subject: 'Build is successful', to: 'mysurareddy1997@gmail.com'
             }
         }
+        // Code Analysis purpose 
+        stage('SonarQube analysis') {
+            steps{
+              withSonarQubeEnv('SonarQube') {
+              sh 'mvn clean package sonar:sonar'
+    } // submitted SonarQube taskId is automatically attached to the pipeline context
+    }
+  
     }
 }
