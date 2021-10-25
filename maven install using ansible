@@ -1,0 +1,16 @@
+---
+- name: install java8_8 and maven
+  hosts: all
+  tasks:
+    - name: install java_8
+      apt:
+       name: openjdk-8-jdk
+       state: present
+    - name: Install Maven using Ansible
+      become: yes
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+           - maven
