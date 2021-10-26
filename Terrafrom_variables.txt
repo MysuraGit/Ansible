@@ -1,0 +1,16 @@
+--------Terraform Variables---file----
+
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnVhSk9DaWZqNFFHek5DdERJVElnRnIzMWVzZ3xBQ3Jtc0trT2FnWnlTUGxNNzVKYzh4MnFjMmxEQTRFbGxvNmVnNlZ4dkFDYUtDT2xMMDJCNzV6aUxDV0djTzlDQnRTZlRlRUlnSG1vQmwyd3dsZzA1cnVPS1JQMm42cmFKOHlNeW93a0J2M0dzSG5GaTFTbEtzcw&q=https%3A%2F%2Fjhooq.com%2Fterraform-input-variables%2F
+
+
+
+▬▬▬▬▬▬ * Instruction's Guides * ▬▬▬▬▬▬ 
+
+1. How to use Terraform input variables - 
+
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVRudWpMVXpJR3ZMLXJ5eXpNS3NwQ1B1M3U3UXxBQ3Jtc0trSGRKWUk2a0J0QTg5dlpOeXRWTWdwUHRxamFnOVdmZVFMUWNTUUxrMWpIU3YxQU5Bb05PSk5xOVVfVGNRUzZ2cjcwSGE5MHlzOTZ0YnM1bFNHTm5GY242WFpwNEozeWd3ZC1fTW5FazlEUlNmOS1TYw&q=https%3A%2F%2Fjhooq.com%2Fterraform-variable-and-tfvars-file%2F
+
+▬▬▬▬▬▬ * Previous Guides * ▬▬▬▬▬▬ 
+How to use Terraform input variables - 
+
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDg2MV9QVDA3enp1Y25hUkhzNHJ2RDRVUnFmQXxBQ3Jtc0ttV1FQd3RBalZTYnRxYjZTYkhwNmRhVDNpT0V4djVIZlJfbkRER3V1NHRZZEFlUWFLc2NBM0JiTVZHZ0k0c0NzdDdUZmRYcGs0Zlp2NTB2UnBOektiTjNqUEtOWEltN1E5bU1qU19FSmp4OEcydThqaw&q=https%3A%2F%2Fjhooq.com%2Fterraform-input-variables%2F
