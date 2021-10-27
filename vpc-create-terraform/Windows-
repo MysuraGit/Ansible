@@ -1,0 +1,12 @@
+Windows lo Terraform use chesi aws-key pair create chesina ka manaki keypair file kavali anttey below commands windows powershell lo 
+commands execute cheyali 
+
+
+
+$path = ".\aws-keyname.pem"
+#Reset to Romove explict permmissions 
+icacls.exe $path /reset
+# Give current user explict read-permission
+icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
+# Disable inheritance and remove inherited permission
+icacls.exe $path /inheritance:r
