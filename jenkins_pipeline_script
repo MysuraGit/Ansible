@@ -26,6 +26,21 @@ This is Build is passed
 Thanks''', cc: '', from: '', replyTo: '', subject: 'Build is successful', to: 'mysurareddy1997@gmail.com'
             }
         }
+        stage('continuous Nexus Repo') {
+            steps {
+                nexusArtifactUploader artifacts: [[artifactId: 'maven-project', 
+                classifier: '', 
+                file: '/home/ubuntu/.jenkins/workspace/job1/webapp/target/webapp.war', 
+                type: 'war']], 
+                credentialsId: 'nexus3', 
+                groupId: 'com.example.maven-project', 
+                nexusUrl: '172.31.31.207:8081', 
+                nexusVersion: 'nexus3', 
+                protocol: 'http', 
+                repository: 'simpleapp-release', 
+                version: '1.2'
+            }
+        }
         // Code Analysis purpose 
         stage('SonarQube analysis') {
             steps{
