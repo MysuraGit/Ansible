@@ -1,0 +1,30 @@
+# create Security_Group
+resource "aws_security_group" "Web_server" {
+  name        = "Web_server_Security_Group"
+  description = "Enable HTTP/HTTPS open PORT on 80/22"
+  vpc_id      = aws_vpc.Test_vpc.id
+
+  ingress {
+      description      = "Access HTTP"
+      from_port        = 443
+      to_port          = 443
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
+    }
+  ingress {
+      description      = "Access SSH Port"
+      from_port        = 22
+      to_port          = 22
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
+    }    
+  egress {
+      from_port        = 0
+      to_port          = 0
+      protocol         = "-1"
+      cidr_blocks      = ["0.0.0.0/0"]
+    }
+  tags = {
+    Name = "Web_SG"
+  }
+}
